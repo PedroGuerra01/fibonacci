@@ -1,3 +1,22 @@
+def fibonacci(n):
+    sequence = [0, 1]  # Inicia a sequência de Fibonacci com os primeiros dois números: 0 e 1
+    while sequence[-1] < n:
+        next_number = sequence[-1] + sequence[-2]  # Calcula o próximo número da sequência
+        sequence.append(next_number)  # Adiciona o próximo número à sequência
+
+    if n in sequence:
+        return f"O número {n} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {n} não pertence à sequência de Fibonacci."
+
+
+# Solicita ao usuário um número para verificar se pertence à sequência de Fibonacci
+numero = int(input("Digite um número: "))
+
+resultado = fibonacci(numero)
+print(resultado)
+
+Resultado:
 Digite um número: 
 3
 O número 3 pertence à sequência de Fibonacci.
